@@ -1,9 +1,15 @@
-import Main from "./components/mainLayout";
+import { useEffect } from "react";
+import MainLayout from "./components/mainLayout";
+import { socketServer } from "./socket/socketClient";
 
 function App() {
+  useEffect(() => {
+    socketServer(), [];
+  });
+
   return (
     <>
-      <Main />
+      <MainLayout />
     </>
   );
 }

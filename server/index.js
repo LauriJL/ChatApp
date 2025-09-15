@@ -1,17 +1,19 @@
 const express = require("express");
 const http = require("http");
 const cors = require("cors");
-/// Keys etc.
+const { registerSocketServer } = require("./socket/socketServer");
 require("dotenv").config();
 
-/// Server setup
+/// SERVER SETUP
 const app = express();
 const server = http.createServer(app);
+registerSocketServer(server);
 
-// Middleware
+// MIDDLEWARE
 app.use(cors());
+
 app.get("/", (req, res) => {
-  res.json({ message: "Hello from the server!" });
+  res.send({ response: "ok" });
 });
 
 const PORT = process.env.PORT || 3003;

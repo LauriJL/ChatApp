@@ -11,7 +11,7 @@ export default function ChatBubble() {
       </div>
       <div className="chat_box_context">
         <div className="chat_box_bubble">
-          <span>Hello, this is a fake content</span>
+          <span>Hello, this is fake content</span>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import ChatPanel from "./chat/ChatPanel";
 import ChatInput from "./bottomPanel/input";
 import SidePanel from "./chat/SidePanel";
 
-export default function Main() {
+export default function MainLayout() {
   return (
     <div className="--dark-theme" id="chat">
       <div className="chat_box">
